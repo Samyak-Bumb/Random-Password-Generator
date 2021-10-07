@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
-@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Inconsolata', monospace;
-    user-select: none;
 }
 body{
     display: flex;
@@ -14,15 +12,15 @@ body{
     min-height: 100vh;
     background: #f8f8f8;
 }
-.input-box{
+.main{
     position: relative;
     width: 400px;
 }
-.input-box h2{
+.main h2{
     font-size: 26px;
     color: #333;
 }
-.input-box input{
+.main input{
     position: relative;
     margin: 15px 0 20px;
     padding: 0 20px;
@@ -37,19 +35,20 @@ body{
     background: transparent;
     box-shadow: -4px -4px 10px rgba(255,255,255,1), inset 4px 4px 10px rgba(0,0,0,0.05), inset -4px -4px 10px rgba(255,255,255,1), 4px 4px 10px rgba(0,0,0,0.05);
 }
-.input-box input::placeholder{
+.main input::placeholder{
     letter-spacing: 0;
 }
-.input-box #btn{
+.main #btn{
     display: inline-block;
     position: relative;
     font-size: 24px;
     padding: 10px 15px;
-    border-radius: 50px;
+    border-radius: 100vh;
     color: #fff;
     background: #333;
+    user-select: none;
 }
-.input-box #btn:hover{
+.main #btn:hover{
     cursor: pointer;
 }
 .copy{
@@ -57,6 +56,8 @@ body{
     top: 60px;
     right: 15px;
     opacity: 0.2;
+    transition: 300ms ease-in-out;
+    user-select: none;
 }
 .copy:hover{
     cursor: pointer;
